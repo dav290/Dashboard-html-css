@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+
+        .dashboard {
+            display: flex;
+            height: 100vh;
+        }
+
+        .sidebar {
+            width: 250px;
+            background-color: #0077b6;
+            color: #fff;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .sidebar a {
+            color: #fff;
+            text-decoration: none;
+            margin: 15px 0;
+            display: block;
+        }
+
+        .sidebar a:hover {
+            text-decoration: underline;
+        }
+
+        .main {
+            flex: 1;
+            padding: 20px;
+            overflow-y: auto;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .header img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+        }
+
+        .header h2 {
+            margin: 0;
+        }
+
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .project-card {
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+        }
+
+        .project-card h3 {
+            margin: 0 0 10px;
+            font-size: 18px;
+        }
+
+        .project-card p {
+            font-size: 14px;
+            margin: 0 0 10px;
+            color: #555;
+        }
+
+        .project-card .actions {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .project-card .actions i {
+            cursor: pointer;
+        }
+
+        .announcements, .trending {
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        .announcements h4, .trending h4 {
+            margin: 0 0 15px;
+        }
+
+        .announcements p, .trending p {
+            margin: 0 0 10px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="dashboard">
+        <div class="sidebar">
+            <nav>
+                <a href="#">Home</a>
+                <a href="#">Profile</a>
+                <a href="#">Messages</a>
+                <a href="#">History</a>
+                <a href="#">Tasks</a>
+                <a href="#">Communities</a>
+                <a href="#">Settings</a>
+                <a href="#">Support</a>
+                <a href="#">Privacy</a>
+            </nav>
+        </div>
+        <div class="main">
+            <div class="header">
+                <div>
+                    <img src="https://via.placeholder.com/50" alt="User Avatar">
+                    <h2>Hi there, Morgan Oakley (@morgan)</h2>
+                </div>
+                <div>
+                    <button>New</button>
+                    <button>Upload</button>
+                    <button>Share</button>
+                </div>
+            </div>
+            <div class="projects">
+                <div class="project-card">
+                    <h3>Super Cool Project</h3>
+                    <p>Sed tempus ut lacus ut scelerisque. Suspendisse sollicitudin nibh erat.</p>
+                    <div class="actions">
+                        <i>⭐</i> <i>👁</i> <i>✏️</i>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <h3>Less Cool Project</h3>
+                    <p>Nullam condimentum ipsum ut lectus vehicula consectetur.</p>
+                    <div class="actions">
+                        <i>⭐</i> <i>👁</i> <i>✏️</i>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <h3>Impossible App</h3>
+                    <p>In hac habitasse platea dictumst. Vivamus dictum rutrum arcu.</p>
+                    <div class="actions">
+                        <i>⭐</i> <i>👁</i> <i>✏️</i>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <h3>Easy Peasy App</h3>
+                    <p>Etiam cursus eros ac efficitur fringilla. Curabitur dignissim nisl in tortor commodo.</p>
+                    <div class="actions">
+                        <i>⭐</i> <i>👁</i> <i>✏️</i>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <h3>Ad Blocker</h3>
+                    <p>Quisque eget rutrum nisl. Nam augue justo cursus vitae metus vel.</p>
+                    <div class="actions">
+                        <i>⭐</i> <i>👁</i> <i>✏️</i>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <h3>Money Maker</h3>
+                    <p>Praesent convallis libero quis congue elementum.</p>
+                    <div class="actions">
+                        <i>⭐</i> <i>👁</i> <i>✏️</i>
+                    </div>
+                </div>
+            </div>
+            <div class="announcements">
+                <h4>Announcements</h4>
+                <p>Site Maintenance: Vestibulum condimentum tellus lacus.</p>
+                <p>Community Share Day: Nam vel lectus lacinia rutrum nulla eu.</p>
+                <p>Updated Privacy Policy: Phasellus efficitur orci eget elit consectetur.</p>
+            </div>
+            <div class="trending">
+                <h4>Trending</h4>
+                <p>@tegan: World Peace Builder</p>
+                <p>@morgan: Super Cool Project</p>
+                <p>@kendall: Life Changing App</p>
+                <p>@alex: No Traffic Maker</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
